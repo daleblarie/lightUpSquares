@@ -1,5 +1,5 @@
 /* global document */
-const squareSize = 40;
+const squareSize = 60;
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -21,6 +21,6 @@ Square.prototype.glow = function glow() {
 };
 
 Square.prototype.draw = function draw() {
-  ctx.fillStyle = `rgb(${40 + this.xLeft}, 0 , 0)`;
+  ctx.fillStyle = `rgb(${40 + this.xLeft}, ${40 + this.yTop} , 0)`;
   ctx.fillRect(this.xLeft, this.yTop, squareSize, squareSize);
 };
